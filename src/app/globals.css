@@ -1,0 +1,101 @@
+@import "tailwindcss";
+
+:root {
+  --background: #07090e; /* Flat, premium dark carbon broadcast background */
+  --foreground: #f1f5f9;
+  --card-bg: #0d111a;    /* Solid dark panel background */
+  --ipl-gold: #d4af37;   /* Razor-sharp champagne gold accent */
+  --ipl-blue: #1d4ed8;   /* Royal blue */
+  --ipl-orange: #ea580c; /* Orange */
+  --ipl-cyan: #0891b2;   /* Cyber cyan */
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+body {
+  background-color: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-geist-sans), system-ui, sans-serif;
+  overflow-x: hidden;
+}
+
+/* Razor-Sharp Broadcast Panel UI Styles */
+.glass-panel {
+  background: #0d121e;
+  border: 1px solid #1a2336; /* Clean, high-precision dark borders */
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
+  border-radius: 12px;
+}
+
+.glass-panel-glow-cyan {
+  background: #0d121e;
+  border: 1px solid rgba(8, 145, 178, 0.4);
+  box-shadow: 0 4px 16px rgba(8, 145, 178, 0.1);
+}
+
+.glass-panel-glow-emerald {
+  background: #0d121e;
+  border: 1px solid rgba(16, 185, 129, 0.4);
+  box-shadow: 0 4px 16px rgba(16, 185, 129, 0.1);
+}
+
+.glass-panel-glow-pink {
+  background: #0d121e;
+  border: 1px solid rgba(236, 72, 153, 0.4);
+  box-shadow: 0 4px 16px rgba(236, 72, 153, 0.1);
+}
+
+/* Highly Structured Broadcast Grid Mesh Background */
+.mesh-grid {
+  position: fixed;
+  inset: 0;
+  z-index: -10;
+  background-color: #07090e;
+  background-image: 
+    linear-gradient(to right, rgba(255, 255, 255, 0.015) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.015) 1px, transparent 1px);
+  background-size: 32px 32px; /* Fine grid resolution */
+}
+
+/* Custom Scrollbar for professional logs */
+::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+
+::-webkit-scrollbar-track {
+  background: #07090e;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #1a2336;
+  border-radius: 2px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #25324e;
+}
+
+/* Pulsing Status indicators */
+@keyframes live-indicator {
+  0%, 100% {
+    opacity: 0.6;
+    transform: scale(0.95);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.05);
+  }
+}
+
+.live-dot-glow {
+  animation: live-indicator 1.5s infinite ease-in-out;
+}
+
+
+
